@@ -1,5 +1,5 @@
-# Bot Template: Rambo The Rando
+# Bot: The Swift Sweeper
 
-This bot acts as an template for future bot submissions for the Nobleo Colour Battle Coding Challenge.
+A very simple bot which just sweeps over the grid from left to right
 
-Chooses a random location on the grid and charges towards it. Not to be underestimated.
+When it reaches either the top or bottom corner it moves to [0, 0] and starts over
