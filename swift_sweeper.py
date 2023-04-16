@@ -70,11 +70,18 @@ class SwiftSweeper:
 
     def move_to_target(self):
         # Move in direction of target
-        if self.target[0] > self.position[0]:
-            return Move.RIGHT
-        elif self.target[0] < self.position[0]:
-            return Move.LEFT
-        elif self.target[1] > self.position[1]:
-            return Move.UP
+        dx = abs(self.target[0] - self.position[0])
+        dy = abs(self.target[1] - self.position[1])
+        
+        if dx > dy:
+            if self.target[0] > self.position[0]:
+                return Move.RIGHT
+            else:
+                return Move.LEFT
         else:
-            return Move.DOWN
+            if self.target[1] > self.position[1]:
+                return Move.UP
+            else:
+                return Move.DOWN
+        
+        
